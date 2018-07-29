@@ -226,3 +226,24 @@ On the off-chance someone sees this and decides to help out, contributions are m
 # Issues
 
 Use the GitHub issues pages to report and issues with the project. You should include what the error is, any output in the console (with Verbose logging enabled) and if it relates specifically to one file such as a failing CSS file that should work correctly, try to include it or at least a proof of concept file that demonstrates the issue in the same way.
+
+## Compatibility
+
+This hasn't been tested across browsers as this was designed as a hobby thing for a project I was working on. So far it has only been tested in Chrome Version 67.0.3396.99 (Official Build) (64-bit). According to `jscc` (which hasn't been updated since Nov 2016) the main functions used that contain issues are:
+
+| Function                        | Full Support                  | Browsers with Issues                                         |
+| ------------------------------- | ----------------------------- | ------------------------------------------------------------ |
+| `Array.prototype.filter()`      | 97.4% of global browser share | IE 5.5 to 8 (with support via polyfills)                     |
+| `Array.prototype.indexOf()`     | 97.4% of global browser share | IE 5.5 to 8 (with support via polyfills)                     |
+| `Array.prototype.lastIndexOf()` | 97.4% of global browser share | IE 5.5 to 8 (with support via polyfills)                     |
+| `Array.prototype.map()`         | 97.4% of global browser share | IE 5.5 to 8 (with support via polyfills)                     |
+| `Promises`                      | 75.6% of global browser share | Chrome 4 to 21 (pollyfill-able)<br />Firefox 2 to 26(pollyfill-able)<br />IE 5.5 to 11(pollyfill-able)<br />iOS Safari 3.2 to 7.0-7.1(pollyfill-able)<br />Opera 9 to 18(pollyfill-able)<br />Opera Mini (all)(pollyfill-able)<br />Safari 3.1 to 7(pollyfill-able)<br />UC Browser for Android 11(pollyfill-able)<br />Chrome 32 (partial support)<br />Firefox 27 to 28 (partial support)<br />Opera 19 (partial support) |
+
+This isn't guaranteed to be exhaustive and is likely to to be missing some things so make sure you do your testing before deploying it properly. This was just a quick check to see what was valid and what was not. This was tested on the minified version
+
+# Dependencies and Acknowledgements
+
+The project depends on jQuery available [here](https://jquery.com/)
+
+Code was minified using `babel-minify` available [here](https://github.com/babel/minify)
+
